@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CAPITUNE | Compte Client</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-logo">C</span>
+          <div>
+            <h1>CAPITUNE</h1>
+            <p>Compte Client</p>
+          </div>
+        </div>
+
+        <button id="profileToggle" class="profile-trigger" aria-expanded="false" aria-controls="profileMenu">
+          <img id="avatarPreview" src="https://api.dicebear.com/7.x/initials/svg?seed=Jean%20Dupont" alt="Avatar client" />
+          <div>
+            <strong>Jean Dupont</strong>
+            <span>jean.dupont@email.com</span>
+          </div>
+          <span class="status-dot" title="En ligne"></span>
+        </button>
+
+        <div id="profileMenu" class="profile-menu" hidden>
+          <p><strong>Statut</strong> Client Premium</p>
+          <label class="field">
+            <span>Nom</span>
+            <input id="nameInput" type="text" value="Jean Dupont" />
+          </label>
+          <label class="field">
+            <span>Email</span>
+            <input id="emailInput" type="email" value="jean.dupont@email.com" />
+          </label>
+          <label class="field">
+            <span>Photo avatar</span>
+            <input id="avatarInput" type="file" accept="image/*" />
+          </label>
+          <div class="quick-links">
+            <button type="button">Profil</button>
+            <button type="button">Paramètres</button>
+            <button type="button">Documents</button>
+            <button type="button">Support</button>
+          </div>
+          <div class="menu-actions">
+            <button id="saveProfile" type="button" class="btn-primary">Enregistrer</button>
+            <button type="button" class="btn-ghost">Déconnexion</button>
+          </div>
+        </div>
+      </header>
+
+      <nav class="tabs desktop-tabs" aria-label="Navigation principale">
+        <button class="tab active" data-tab="services">Services</button>
+        <button class="tab" data-tab="messagerie">Messagerie</button>
+        <button class="tab" data-tab="paiements">Paiements</button>
+        <button class="tab" data-tab="faq">FAQ</button>
+        <button class="tab" data-tab="tarifs">Tarifs</button>
+      </nav>
+
+      <main>
+        <section id="services" class="tab-panel active">
+          <h2>Choisir et configurer votre accompagnement</h2>
+          <p class="intro">Personnalisez votre parcours CAPITUNE en sélectionnant les prestations adaptées à votre projet Canada.</p>
+          <div class="card-grid">
+            <article class="card">
+              <h3>Évaluation de profil</h3>
+              <p>Audit initial + recommandation de programme d'immigration.</p>
+              <label><input type="checkbox" checked /> Inclure analyse express</label>
+            </article>
+            <article class="card">
+              <h3>Préparation dossier</h3>
+              <p>Collecte des pièces, conformité et relecture complète.</p>
+              <label><input type="checkbox" /> Ajouter option prioritaire</label>
+            </article>
+            <article class="card">
+              <h3>Coaching entretiens</h3>
+              <p>Sessions de préparation et simulations en conditions réelles.</p>
+              <label><input type="checkbox" /> Activer pack intensif</label>
+            </article>
+          </div>
+        </section>
+
+        <section id="messagerie" class="tab-panel">
+          <h2>Messagerie CAPITUNE</h2>
+          <p class="intro">Suivez les échanges avec l'équipe et gardez un historique centralisé de vos demandes.</p>
+          <div class="messages">
+            <article class="message from-team"><strong>Équipe CAPITUNE :</strong> Nous avons bien reçu vos documents. Vérification en cours.</article>
+            <article class="message from-user"><strong>Vous :</strong> Merci, j'attends votre retour sur l'attestation bancaire.</article>
+            <article class="message from-team"><strong>Équipe CAPITUNE :</strong> Retour prévu sous 24h avec les prochaines actions.</article>
+          </div>
+          <form class="compose">
+            <textarea placeholder="Écrire un message..."></textarea>
+            <button type="button" class="btn-primary">Envoyer</button>
+          </form>
+        </section>
+
+        <section id="paiements" class="tab-panel">
+          <h2>Paiements & opérations</h2>
+          <p class="intro">Réglez vos services et visualisez vos transactions en toute transparence.</p>
+          <div class="card-grid two-cols">
+            <article class="card">
+              <h3>Prochaine échéance</h3>
+              <p><strong>290 €</strong> - Préparation dossier</p>
+              <button class="btn-primary">Payer maintenant</button>
+            </article>
+            <article class="card">
+              <h3>Historique récent</h3>
+              <ul>
+                <li>15/02 - 190 € - Évaluation profil ✅</li>
+                <li>03/02 - 49 € - Session coaching ✅</li>
+                <li>30/01 - 290 € - Acompte dossier ✅</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section id="faq" class="tab-panel">
+          <h2>FAQ Client</h2>
+          <p class="intro">Retrouvez les réponses aux questions fréquentes pour avancer plus sereinement.</p>
+          <details open>
+            <summary>Quels documents préparer en priorité ?</summary>
+            <p>Passeport, preuves financières, diplômes et relevés d'expérience professionnelle.</p>
+          </details>
+          <details>
+            <summary>Combien de temps prend une demande ?</summary>
+            <p>Le délai dépend du programme choisi. Un planning détaillé vous est fourni dans votre suivi.</p>
+          </details>
+          <details>
+            <summary>Puis-je changer de formule en cours ?</summary>
+            <p>Oui, selon l'avancement du dossier. Contactez l'équipe via Messagerie pour ajuster votre pack.</p>
+          </details>
+        </section>
+
+        <section id="tarifs" class="tab-panel">
+          <h2>Tarifs CAPITUNE</h2>
+          <p class="intro">Comparez rapidement les offres et choisissez le niveau d'accompagnement adapté.</p>
+          <div class="card-grid">
+            <article class="card price">
+              <h3>Essentiel</h3>
+              <p class="price-value">199 €</p>
+              <p>Orientation + checklist personnalisée</p>
+            </article>
+            <article class="card price">
+              <h3>Avancé</h3>
+              <p class="price-value">499 €</p>
+              <p>Suivi dossier + relecture complète</p>
+            </article>
+            <article class="card price">
+              <h3>Premium</h3>
+              <p class="price-value">899 €</p>
+              <p>Accompagnement prioritaire de bout en bout</p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <nav class="tabs mobile-tabs" aria-label="Navigation mobile">
+        <button class="tab active" data-tab="services">Services</button>
+        <button class="tab" data-tab="messagerie">Messages</button>
+        <button class="tab" data-tab="paiements">Paiements</button>
+        <button class="tab" data-tab="faq">FAQ</button>
+        <button class="tab" data-tab="tarifs">Tarifs</button>
+      </nav>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
